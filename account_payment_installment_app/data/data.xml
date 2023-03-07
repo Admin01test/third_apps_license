@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="email_template_installment_payment_date_remainder" model="mail.template">
+			<field name="name">Installment Payment Date Reminder</field>
+			<field name="model_id" ref="account_payment_installment_app.model_installment_account_payment_details"/>
+			<field name="email_from">${user.partner_id.email |safe}</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p style="margin: 0px; padding: 0px; font-size: 13px;"></p>
+
+						Dear  ${object.partner_id.name},
+						<br /><br />
+						We wanted to let you know that you installment <strong>${object.installment_id.name}</strong> payment date is ,<strong>${object.payment_date}</strong>.
+						<br /><br />
+						Invoice : <strong>${object.installment_id.name}</strong><br />
+						Invoice by : <strong>${object.installment_id.user_id.name}</strong><br />
+						Invoice Payment : <strong>${object.payment_amount}</strong><br />
+						Invoice Date : ${object.installment_id.invoice_date}<br /><br />
+						Feel free to contact us if you have any question.<br /><br /> 
+
+						% if object.partner_id.company_id:
+						Best regards,<br />
+						from <strong>${object.partner_id.company_id.name | safe}
+						</strong>
+						% endif
+				</div>
+			</field>
+		</record> 
+	</data>
+</odoo>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_order_form_extends_to_add_receivable_field"
+		model="ir.ui.view">
+		<field name="name">view.order.form.extends.to.add.receivable.field
+		</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header" position="after">
+				<div class="alert alert-info" role="alert"
+					style="margin-bottom:0px;text-align: center; font-size: 20px;"
+					attrs="{'invisible': [('partner_id', '=',False)]}">
+					El monto adeudado por el cliente es
+					<bold>
+						<field name="customer_receivable_amount" />
+					</bold>
+				</div>
+			</xpath>
+			<field name="payment_term_id" position="after">
+				<field name="customer_receivable_amount" />
+				<field name="customer_credit_limit" />
+				<field name="is_warning" invisible="1"/>
+			</field>
+
+			<xpath expr="//sheet/div[@name='button_box']" position="after">
+				<div
+					class="oe_title alert alert-danger" role="alert"
+					style="margin-bottom:0px;text-align: center; font-size: 15px;"
+					attrs="{'invisible': ['|',('partner_id', '=',False),('is_warning','!=',True)]}">
+					Se ha cruzado el límite de crédito del cliente
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+
+</odoo>

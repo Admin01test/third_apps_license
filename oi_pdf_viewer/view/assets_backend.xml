@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <template id="assets_backend" name="PDF Viewer assets backend" inherit_id="web.assets_backend">        
+        <script position="after">
+        	<script type="text/javascript" src="/oi_pdf_viewer/static/src/js/pdf_model.js"></script>
+        	<script type="text/javascript" src="/oi_pdf_viewer/static/src/js/pdf_renderer.js"></script>
+        	<script type="text/javascript" src="/oi_pdf_viewer/static/src/js/pdf_controller.js"></script>
+        	<script type="text/javascript" src="/oi_pdf_viewer/static/src/js/pdf_view.js"></script>
+        </script>              
+    </template>
+    
+</odoo>

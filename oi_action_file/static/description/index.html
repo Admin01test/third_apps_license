@@ -1,0 +1,133 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Client Action File Download</h2>
+     </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#882C76;">"Triggers File Download from Server Action"</h2>
+        <h3 class="oe_slogan">This module allows developers to trigger file download from server action.</h3>
+    </div>
+</section>
+
+
+<section class="oe_container">
+     <div class="oe_row oe_spaced">
+     	<div class="oe_row" >
+     		<h3 style="color:#882C76;">Description</h3>
+     		<p style="line-height: 1.6;">This module allows developers to trigger file download from server action.</p>
+     	</div>
+	</div>
+</section>
+
+<section class="oe_container">
+     <div class="oe_row oe_spaced">
+     	<div class="oe_row" >
+     		<h3 style="color:#882C76;">Views</h3>
+     		<ul style="margin-left: -10px;line-height: 1.6;">
+     			<li><p>INHERIT assets_backend (qweb)<p></li>
+     			     			
+     		</ul>
+     	</div>
+	</div>
+</section>
+
+
+
+<section class="oe_container">
+     <div class="oe_row oe_spaced">
+     	<div class="oe_row" >
+     		<h3 style="color:#882C76;">Dependencies</h3>
+     		<ul style="margin-left: -10px;line-height: 1.6;">
+     			<li><p>Web</p></li>   				
+     		</ul>
+     	</div>
+	</div>
+</section>
+
+<section class="oe_container">
+     <div class="oe_row oe_spaced">
+     	<div class="oe_row" >
+     		<h3 style="color:#882C76;">Demonstration</h3>
+     	</div>
+	</div>
+</section>
+
+<section class="oe_container">
+     <div class="oe_row oe_spaced">
+     	<h3 class="oe_slogan" style="color:#882C76;">&#9673; Sample Code &#9673;</h2>
+		<div class="oe_row text-center" >          
+	     	<h4 class="oe_slogan oe_spaced">Attachment record</h4>	     	
+        </div>
+		
+		<div class="oe_centered" style="width:600px">
+<!-- HTML generated using hilite.me --><div style="width:auto; border:solid gray; border-width:.1em .1em .1em .8em; padding:.2em .6em"><pre style="margin:0; line-height:125%">action <span style="color:#666666">=</span>  {
+            <span style="color:#4070a0">'type'</span> : <span style="color:#4070a0">'ir.actions.client'</span>,
+            <span style="color:#4070a0">'tag'</span> : <span style="color:#4070a0">'file_download'</span>,
+            <span style="color:#4070a0">'params'</span> : {
+                <span style="color:#4070a0">'id'</span>: attachment<span style="color:#666666">.</span>id,
+                <span style="color:#4070a0">'download'</span> : <span style="color:#007020">True</span>
+                }
+            } 
+</pre></div>
+        </div>
+		        
+     </div>
+     
+     <div class="oe_row oe_spaced">
+     	<div class="oe_row text-center" >          
+	     	<h4 class="oe_slogan oe_spaced">Other binary field</h4>
+        </div>
+		
+		<div class="oe_centered" style="width:600px">
+<!-- HTML generated using hilite.me --><div style="width:auto; border:solid gray; border-width:.1em .1em .1em .8em; padding:.2em .6em"><pre style="margin:0; line-height:125%">action <span style="color:#666666">=</span> {
+    <span style="color:#4070a0">'type'</span>: <span style="color:#4070a0">'ir.actions.client'</span>,
+    <span style="color:#4070a0">'tag'</span> : <span style="color:#4070a0">'file_download'</span>,
+    <span style="color:#4070a0">'params'</span> : {
+        <span style="color:#4070a0">'model'</span> : <span style="color:#007020">self</span><span style="color:#666666">.</span>_name,
+        <span style="color:#4070a0">'field'</span> : <span style="color:#4070a0">'datas'</span>,
+        <span style="color:#4070a0">'id'</span> : <span style="color:#007020">self</span><span style="color:#666666">.</span>id,
+        <span style="color:#4070a0">'filename'</span> : <span style="color:#007020">self</span><span style="color:#666666">.</span>filename,
+        <span style="color:#4070a0">'filename_field'</span> : <span style="color:#4070a0">'filename'</span>,
+        <span style="color:#4070a0">'download'</span> : <span style="color:#007020">True</span>
+        }
+    }
+</pre></div>
+
+        </div>        
+     </div>
+
+     
+</section>
+
+
+
+
+
+
+<section class="oe_container">
+    <div class="oe_mt16 oe_mb16">
+        <h2 class="oe_slogan">Need Any Help?</h2>
+    </div>
+    <div class="oe_slogan">
+    	<a href="https://www.open-inside.com/" target="_blank">
+           <img src="logo.png" style="width: 150px; margin-top: 25px;" class="center-block">
+       </a>
+    </div>
+    <div class="oe_slogan">
+        <a class="btn btn-primary btn-md mt8" style="color: #FFFFFF !important;" href="mailto:odoo@open-inside.com" target="_blank">
+        	<i class="fa fa-envelope"></i>
+         	Email 
+        </a>
+        <a class="btn btn-primary btn-md mt8" style="color: #FFFFFF !important;" href="https://www.open-inside.com/page/contactus" target="_blank">
+	        <i class="fa fa-phone"></i> 
+	        Contact Us 
+        </a>
+        <a class="btn btn-primary btn-md mt8" style="color: #FFFFFF !important;" href="https://www.open-inside.com/openinside/products/" target="_blank">
+	        <i class="fa fa-suitcase"></i>
+	        Our Products 
+        </a>
+        
+    </div>
+</section>

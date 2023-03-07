@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_ks_shopify_base"
+              name="Shopify Connector"
+              web_icon="ks_shopify,static/description/icon.png"
+              groups="ks_shopify.ks_shopify_group"
+    />
+    <menuitem id="menu_ks_shopify_dashboard"
+              name="Dashboard"
+              sequence="1"
+              parent="menu_ks_shopify_base"
+              action="ks_shopify_dashboard_action"/>
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_sales_config_inherited"-->
+<!--              parent='menu_ks_woo_base'-->
+<!--              sequence="1"-->
+<!--              name="Dashboard"-->
+<!--              action="ks_woo_dashboard_action"-->
+<!--    />-->
+    <!--    Action required here-->
+    <menuitem id="menu_ks_shopify_instance"
+              name="Instance"
+              sequence="2"
+              parent="menu_ks_shopify_base"
+              action="action_ks_shopify_connector_instance"
+    />
+
+    <menuitem id="menu_ks_processes"
+              name="Processes"
+              sequence="5"
+              parent="menu_ks_shopify_base"/>
+
+    <!--    Action required here-->
+
+
+<!--    <menuitem id="menu_ks_processes_operations"-->
+<!--              name="Perform Operations"-->
+<!--              sequence="2"-->
+<!--              parent="ks_shopify.menu_ks_processes"-->
+<!--    />-->
+
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_ks_processes_specific_operations"-->
+<!--              name="Specific Operations"-->
+<!--              sequence="1"-->
+<!--              parent="ks_shopify.menu_ks_processes_operations"-->
+<!--              action = "ks_shopify_specific_operations_action"-->
+<!--    />-->
+
+<!--    <menuitem id="menu_ks_processes_multiple_operations"-->
+<!--              name="Multiple Operations"-->
+<!--              sequence="2"-->
+<!--              parent="ks_shopify.menu_ks_processes_operations"-->
+<!--              action="ks_shopify_multiple_operations_action"-->
+<!--    />-->
+
+<!--        Action required here-->
+    <menuitem id="menu_ks_processes_queue_jobs"
+              name="Queue Jobs"
+              sequence="3"
+              parent="ks_shopify.menu_ks_processes"
+              action="ks_queue_jobs_direct_action"
+    />
+    <menuitem id="menu_ks_shopify_log_details"
+              name="Logs Detail"
+              sequence="4"
+
+              parent="ks_shopify.menu_ks_processes"/>
+
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_success_log_details"
+              name="Success Logs"
+              sequence="1"
+              parent="menu_ks_shopify_log_details"
+              action="ks_shopify_logs_success_action"
+    />
+
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_failed_log_details"
+              name="Failed Logs"
+              sequence="2"
+              parent="menu_ks_shopify_log_details"
+              action="ks_shopify_logs_failed_action"
+    />
+
+    <menuitem id="menu_ks_reporting"
+              name="Reporting"
+              sequence="6"
+              parent="menu_ks_shopify_base"/>
+
+    <menuitem id="menu_ks_sales_reporting"
+              name="Sales"
+              parent="menu_ks_reporting"
+              action="shopify_action_sales_report_all"
+    />
+
+    <menuitem id="menu_ks_print_sales_report"
+              name="Instance Sales Report"
+              parent="menu_ks_reporting"
+              action="action_sales_report_generate"
+    />
+
+    <menuitem id="menu_ks_shopify_configuration"
+              name="Configuration"
+              parent="menu_ks_shopify_base"/>
+<!--    <menuitem id="menu_ks_shopify_settings"-->
+<!--              name="Settings"-->
+<!--              parent="menu_ks_shopify_configuration"-->
+<!--              sequence="1"-->
+<!--              action="action_shopify_config"/>-->
+    <menuitem id="menu_ks_shopify_email_report"
+              name="Email Report Configurations"
+              parent="menu_ks_shopify_configuration"
+              sequence="1"
+              action="ks_shopify_email_report_action"/>
+
+    <menuitem id="menu_ks_shopify_locations"
+              name="Shopify Locations"
+              parent="menu_ks_shopify_configuration"
+              sequence="1"
+              action="action_ks_shopify_locations"/>
+
+    <menuitem id="menu_ks_shopify_layer"
+              name="Layer Models"
+              sequence="2"
+              parent="menu_ks_shopify_configuration"
+              groups="base.group_no_one"
+    />
+
+    <menuitem id="menu_sale_workflow"
+              name="Sale Workflow"
+              parent="menu_ks_shopify_configuration"
+              sequence="-1"
+              action="ks_base_connector.ks_sale_auto_workflow_action"
+    />
+
+    <menuitem id="menu_ks_shopify_sales"
+              name="Sales"
+              sequence="3"
+              parent="menu_ks_shopify_layer"
+    />
+
+    <menuitem id="menu_ks_shopify_customers"
+              name="Customers"
+              sequence="1"
+              parent="menu_ks_shopify_layer"
+              action="action_ks_shopify_partner"
+    />
+    <menuitem id="menu_ks_shopify_collection"
+              name="Collections"
+              sequence="2"
+              parent="menu_ks_shopify_layer"
+    />
+    <menuitem id="menu_ks_shopify_cust_coll"
+              name = "Custom Collections"
+              parent = "menu_ks_shopify_collection"
+              action = "ks_shopify_collection_actions"
+    />
+
+    <menuitem id="menu_ks_parent_invoices"
+              name="Invoices"
+              parent="menu_ks_shopify_sales"/>
+
+    <menuitem id="menu_ks_invoices"
+              name="Invoices"
+              parent="menu_ks_parent_invoices"
+              action="action_shopify_invoices"/>
+
+    <menuitem id="menu_ks_parent_transfers"
+              name="Transfers"
+              parent="menu_ks_shopify_sales"/>
+
+    <menuitem id="menu_ks_delivery_transfers"
+              name="Delivery Transfers"
+              parent="menu_ks_parent_transfers"
+              action="action_shopify_deliveries"/>
+
+    <menuitem id="menu_ks_refunds"
+              name="Refunds"
+              parent="menu_ks_parent_invoices"
+              action="action_shopify_refund"/>
+
+    <menuitem id="menu_ks_shopify_sale_orders"
+              name="Orders"
+              sequence="2"
+              parent="menu_ks_shopify_sales"
+
+    />
+    <menuitem id="menu_ks_shopify_discounts"
+              name = "Shopify Discounts"
+              parent = "menu_ks_shopify_sale_orders"
+              action = "ks_shopify_discounts_action"
+    />
+    <!--    Action required here-->
+    <menuitem id="menu_ks_shopify_quotations"
+              name="Quotations"
+              sequence="1"
+              parent="menu_ks_shopify_sale_orders"
+              action="action_shopify_sale_order_quote"
+    />
+
+    <!--    Action required here-->
+    <menuitem id="menu_ks_shopify_orders"
+              name="Orders"
+              sequence="2"
+              parent="ks_shopify.menu_ks_shopify_sale_orders"
+              action="action_shopify_sale_order"
+
+    />
+    <menuitem id="menu_ks_shopify_invoices"
+              name="Invoices"
+              sequence="3"
+              parent="menu_ks_shopify_sales"
+    />
+    <menuitem id="menu_ks_shopify_payment"
+              name="Payment Gateway"
+              sequence="6"
+              parent="menu_ks_shopify_sales"
+              action="ks_shopify_payment_view_action"/>
+    <!--    Action required here-->
+<!--    <menuitem id="menu_ks_shopify_all_invoices"-->
+<!--              name="Invoices"-->
+<!--              sequence="1"-->
+<!--              parent="ks_shopify.menu_ks_shopify_invoices"-->
+<!--              action="action_shopify_invoices"-->
+
+<!--    />-->
+    <!--    Action required here-->
+<!--    <menuitem id="menu_ks_shopify_refund"-->
+<!--              name="Refunds"-->
+<!--              sequence="2"-->
+<!--              parent="ks_shopify.menu_ks_shopify_invoices"-->
+<!--              action="action_shopify_refund"-->
+
+<!--    />-->
+<!--    <menuitem id="menu_ks_woo_payment"-->
+<!--              name="Payments"-->
+<!--              sequence="4"-->
+<!--              parent="menu_ks_woo_sales"/>-->
+
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_ks_woo_payment_gateway"-->
+<!--              name="Payment Gateway"-->
+<!--              parent="ks_woocommerce.menu_ks_woo_payment"-->
+<!--              action="action_woo_payment_gateway"-->
+<!--    />-->
+
+<!--    <menuitem id="menu_ks_woo_transfers"-->
+<!--              name="Transfers"-->
+<!--              sequence="5"-->
+<!--              parent="menu_ks_woo_sales"-->
+<!--    />-->
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_ks_woo_delivery_transfer"-->
+<!--              name="Delivery Transfer"-->
+<!--              sequence="1"-->
+<!--              action="action_woocommerce_deliveries"-->
+<!--              parent="ks_woocommerce.menu_ks_woo_transfers"-->
+<!--    />-->
+
+<!--&lt;!&ndash;    <menuitem id="menu_ks_taxes"&ndash;&gt;-->
+<!--&lt;!&ndash;              name="Taxes"&ndash;&gt;-->
+<!--&lt;!&ndash;              sequence="6"&ndash;&gt;-->
+<!--&lt;!&ndash;              parent="menu_ks_woo_sales"&ndash;&gt;-->
+<!--&lt;!&ndash;    />&ndash;&gt;-->
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--&lt;!&ndash;    <menuitem id="menu_ks_woo_tax"&ndash;&gt;-->
+<!--&lt;!&ndash;              name="Woocommerce Taxes"&ndash;&gt;-->
+<!--&lt;!&ndash;              sequence="1"&ndash;&gt;-->
+<!--&lt;!&ndash;              action="action_woocommerce_taxes"&ndash;&gt;-->
+<!--&lt;!&ndash;              parent="ks_woocommerce.menu_ks_taxes"&ndash;&gt;-->
+<!--&lt;!&ndash;    />&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_product"
+              name="Products"
+              sequence="4"
+              groups="base.group_no_one"
+              parent="ks_shopify.menu_ks_shopify_layer"
+    />
+
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_product_products"
+              name="Products"
+              sequence="1"
+              action="action_ks_shopify_product_template_"
+              parent="ks_shopify.menu_ks_shopify_product"
+    />
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_product_variants"
+              name="Product Variants"
+              sequence="2"
+              action="action_ks_shopify_product_variants_"
+              parent="ks_shopify.menu_ks_shopify_product"
+    />
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_ks_woo_coupons"-->
+<!--              name="Coupons"-->
+<!--              sequence="3"-->
+<!--                action="action_ks_woo_coupon"-->
+<!--              parent="ks_woocommerce.menu_ks_woo_product"-->
+<!--    />-->
+    <menuitem id="menu_ks_shopify_catalogue"
+              name="Catalogue"
+              sequence="4"
+              parent="ks_shopify.menu_ks_shopify_product"
+    />
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_ks_woo_tags"-->
+<!--              name="Tags"-->
+<!--              sequence="1"-->
+<!--              parent="ks_woocommerce.menu_ks_woo_catalogue"-->
+<!--              action="action_woo_product_tags"-->
+<!--    />-->
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+<!--    <menuitem id="menu_ks_woo_categories"-->
+<!--              name="Categories"-->
+<!--              sequence="2"-->
+<!--              parent="ks_woocommerce.menu_ks_woo_catalogue"-->
+<!--              action="action_ks_woo_product_category"-->
+
+<!--    />-->
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_attribute"
+              name="Attributes"
+              sequence="3"
+              action="action_ks_shopify_product_attribute"
+              parent="ks_shopify.menu_ks_shopify_catalogue"
+    />
+<!--    &lt;!&ndash;    Action required here&ndash;&gt;-->
+    <menuitem id="menu_ks_shopify_attribute_terms"
+              name="Attribute Terms"
+              sequence="4"
+              action="action_ks_shopify_product_attribute_value"
+              parent="ks_shopify.menu_ks_shopify_catalogue"
+
+    />
+<!--    <menuitem id="menu_ks_processes_inventory_adjustment"-->
+<!--              name="Inventory Adjustments"-->
+<!--              sequence="40"-->
+<!--              parent="ks_woocommerce.menu_ks_woo_product"-->
+<!--              action="action_woocommerce_inventory_adjustments"-->
+
+<!--    />-->
+
+<!--    <menuitem id="menu_ks_meta_mapping"-->
+<!--              name="Woo Meta Mapping"-->
+<!--              parent="menu_ks_woo_configuration"-->
+<!--              sequence="-1"-->
+<!--              action="ks_woo_meta_mapping_action"/>-->
+</odoo>

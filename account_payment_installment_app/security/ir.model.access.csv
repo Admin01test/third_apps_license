@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_installment_payment_details,access_installment_payment_details,model_installment_payment_details,,1,1,1,1
+access_installment_account_payment_details,access_installment_account_payment_details,model_installment_account_payment_details,,1,1,1,1
+access_account_payment_installment,access_account_payment_installment,model_account_payment_installment,,1,1,1,1

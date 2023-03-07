@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <record id="stock_move_incoming_ref" model="ir.ui.view">
+            <field name="name">stock.move.form.chemtech_margin</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='reference']" position="after">
+                    <field name="incoming_reference" readonly="1" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='move_orig_ids']" position="after">
+                    <field name="incom_ref_line">
+                        <tree>
+                            <field name="ref"/>
+                            <field name="qty"/>
+                            <field name="cost_to_add" invisible="0"/>
+                            <field name="move_id"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="stock_valuation_layer_inherit" model="ir.ui.view">
+            <field name="name">valuation.layer.inherit</field>
+            <field name="model">stock.valuation.layer</field>
+            <field name="inherit_id" ref="stock_account.stock_valuation_layer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[2]" position="after">
+                    <page>
+                        <field name="incom_ref_line">
+                            <tree>
+                                <field name="ref"/>
+                                <field name="qty"/>
+                                <field name="cost_to_add" invisible="0"/>
+                                <field name="move_id"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

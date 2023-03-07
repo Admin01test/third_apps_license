@@ -1,0 +1,947 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* rma_ept
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-18 02:21+0000\n"
+"PO-Revision-Date: 2018-11-18 02:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rma_ept
+#: model:mail.template,body_html:rma_ept.mail_rma_details_notification_ept
+msgid "\n"
+"<p>Dear ${object.partner_id.name}\n"
+"% if object.partner_id.parent_id:\n"
+"    (<i>${object.partner_id.parent_id.name}</i>)\n"
+"% endif\n"
+",</p>\n"
+"<p>\n"
+"Please find attached Return for <strong>${object.sale_id.name}</strong> with <strong>${object.code}</strong> in <strong>${object.state}</strong> status.\n"
+"</p>\n"
+"<p>Thank you,</p>\n"
+"<p style=\"color:#888888;\">\n"
+"% if object.user_id and object.user_id.signature:\n"
+"    ${object.user_id.signature | safe}\n"
+"% endif\n"
+"</p>\n"
+""
+msgstr "\n"
+"<p>Cher ${object.partner_id.name}\n"
+"% if object.partner_id.parent_id:\n"
+"    (<i>${object.partner_id.parent_id.name}</i>)\n"
+"% endif\n"
+",</p>\n"
+"<p>\n"
+"Veuillez trouver en pièce jointe pour <strong>${object.sale_id.name}</strong> avec <strong>${object.code}</strong> dans l'état <strong>${object.state}</strong>.\n"
+"</p>\n"
+"<p>Merci,</p>\n"
+"<p style=\"color:#888888;\">\n"
+"% if object.user_id and object.user_id.signature:\n"
+"    ${object.user_id.signature | safe}\n"
+"% endif\n"
+"</p>\n"
+""
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_res_partner_claim_count
+#: model:ir.model.fields,field_description:rma_ept.field_res_users_claim_count
+msgid "# Claims"
+msgstr "# Réclamations"
+
+#. module: rma_ept
+#: model:mail.template,report_name:rma_ept.mail_rma_details_notification_ept
+msgid "${(object.code or '')}"
+msgstr ""
+
+#. module: rma_ept
+#: model:mail.template,subject:rma_ept.mail_rma_details_notification_ept
+msgid "${object.company_id.name} RMA (Ref ${object.code or 'n/a' })"
+msgstr ""
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:477
+#, python-format
+msgid "%s (copy)"
+msgstr ""
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:207
+#, python-format
+msgid "%s Product's delivered quantites were already processed for RMA"
+msgstr "%s Quantités de produits livrés déjà traité pour ARM"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "- Approved"
+msgstr "- Approuvé"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "- Closed"
+msgstr "- Fermé"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "- Rejected"
+msgstr "- Rejeté"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "- Waiting For Approval"
+msgstr "- En attente d'approbation"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "<span class=\"o_stat_text\">Deliveries</span>"
+msgstr "<span class=\"o_stat_text\">Livraisons</span>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "<span class=\"o_stat_text\">Receipt</span>"
+msgstr "<span class=\"o_stat_text\">Reçu</span>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "<span class=\"o_stat_text\">Refund Invoices</span>"
+msgstr "<span class=\"o_stat_text\">Avoirs</span>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "<span class=\"o_stat_text\">Sale Order</span>"
+msgstr "<span class=\"o_stat_text\">Bon de commande</span>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<span>Return Order #</span>"
+msgstr "<span>Ordre de retour #</span>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>Client:</strong>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>Order Reference:</strong>"
+msgstr "<strong>Référence d'achat:</strong>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>RMA Note:</strong>"
+msgstr "<strong>Note d'ARM:</strong>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>Responsible:</strong>"
+msgstr "<strong>Responsable:</strong>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>Return Address:</strong>"
+msgstr "<strong>Adresse de retour:</strong>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "<strong>Shipping Reference:</strong>"
+msgstr "<strong>Référence d'expédition:</strong>"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Action"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Action Description..."
+msgstr "Description de l'action..."
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_type_action
+msgid "Action Type"
+msgstr "Type d'action"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Actions"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_active
+msgid "Active"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.menu,name:rma_ept.menu_crm_claim_ept_after_sale
+msgid "After-Sale Services"
+msgstr "Service après vente"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Approve"
+msgstr "Approuver"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,state:0
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_claim_reject_ept
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_account_invoice_claim_id
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Claim"
+msgstr "Réclamation"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Claim Date by Month"
+msgstr "Date de réclamation par mois"
+
+#. module: rma_ept
+#: model:ir.actions.act_window,name:rma_ept.action_claim_from_delivery_ept
+msgid "Claim From Delivery"
+msgstr "Réclamation depuis une livraison"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_claim_line_id
+msgid "Claim Line"
+msgstr "Ligne de réclamation"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:592
+#, python-format
+msgid "Claim Line cannot be delete once it Approved."
+msgstr "Une ligne de réclamation ne peut pas être supprimée une fois approuvée"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Claim Month"
+msgstr "Mois de réclamation"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_claim_type
+msgid "Claim Type"
+msgstr "Type de réclamation"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:169
+#, python-format
+msgid "Claim cannot be delete once it Processed."
+msgstr "Une réclamation ne peut être supprimée une fois traitée"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_stock_picking_claim_count_out
+#: model:ir.ui.view,arch_db:rma_ept.crm_claim_from_delivery_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_calendar_view
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_tree_view
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Claims"
+msgstr "Réclamations"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_claim_picking
+msgid "Close"
+msgstr "Fermer"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,state:0
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_date_closed
+msgid "Closed"
+msgstr "Fermée"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Closure"
+msgstr "Fermeture"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: rma_ept
+#: selection:crm.claim.ept,type_action:0
+msgid "Corrective Action"
+msgstr "Action corrective"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_is_create_invoice
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_is_create_invoice
+msgid "Create Invoice"
+msgstr "Créer une facture"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_create_uid
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_create_uid
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_create_uid
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_create_uid
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_create_date
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_create_date
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_create_date
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_create_date
+msgid "Creation Date"
+msgstr "Date de création"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:505
+#, python-format
+msgid "Customer"
+msgstr "Client"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:507
+#, python-format
+msgid "Customer Email"
+msgstr "Mail client"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_date
+msgid "Date"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Date Closed"
+msgstr "Date de fermeture
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Dates"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_date_deadline
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Deadline"
+msgstr "Date limite"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_res_users_default_section_id
+msgid "Default Sales Team"
+msgstr "Equipe de vente par défaut"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_done_qty
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "Delivered Quantity"
+msgstr "Quantité livrée"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_picking_id
+msgid "Delivery Order"
+msgstr "Bon de livraison"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_description
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "Description"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model.fields,help:rma_ept.field_crm_claim_ept_email_from
+msgid "Destination email for email gateway."
+msgstr "Email de destination pour la passerelle de messagerie"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_display_name
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_display_name
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_display_name
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_display_name
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,state:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_email_from
+msgid "Email"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Suivi"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Group By"
+msgstr "Regroupé par"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_hide
+msgid "Hide"
+msgstr "Masqué"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,priority:0
+msgid "High"
+msgstr "Elevé"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_id
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_id
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_id
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_id
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_id
+msgid "ID"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_account_invoice
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_invoice_id
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_is_visible
+msgid "Is Visible"
+msgstr "Visible"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_is_visible_goods_back
+msgid "Is Visible Goods Back"
+msgstr "Retour de marchandise visible"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept___last_update
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard___last_update
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message___last_update
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept___last_update
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_write_uid
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_write_uid
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_write_uid
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_write_uid
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_write_date
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_write_date
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_write_date
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Opportunité"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,priority:0
+msgid "Low"
+msgstr "Faible"
+
+#. module: rma_ept
+#: model:res.groups,name:rma_ept.group_rma_manager_ept
+msgid "Manager"
+msgstr "Directeur"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_move_id
+msgid "Move"
+msgstr "Mouvement"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_move_product_ids
+msgid "Move Product"
+msgstr "Déplacer le produit"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_new_sale_id
+msgid "New Sale Order"
+msgstr "Nouveau bon de commande"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_action_next
+msgid "Next Action"
+msgstr "Action suivante"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_date_action_next
+msgid "Next Action Date"
+msgstr "Prochaine date d'action"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:488
+#, python-format
+msgid "No Subject"
+msgstr "Pas d'objet"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,priority:0
+msgid "Normal"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_partner_id
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Partner"
+msgstr "Client"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_partner_phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_picking_id
+msgid "Picking"
+msgstr ""
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:210
+#, python-format
+msgid "Please set Return Quantity and Reason for all products."
+msgstr "Veuillez définir une quantité et une raison de retour pour tous les produits"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:342
+#, python-format
+msgid "Please set apporpriate Action for all rma lines."
+msgstr "Veuillez définir l'action appropriée pour toutes les lignes d'arm"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:197
+#, python-format
+msgid "Please set return products."
+msgstr "Veuillez définir les produits à retourner"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,type_action:0
+msgid "Preventive Action"
+msgstr "Action préventive"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_priority
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,state:0
+msgid "Processing"
+msgstr "Traitement"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_to_be_replace_product_id
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_product_id
+msgid "Product to be Replace"
+msgstr "Produit à remplacer"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:565
+#, python-format
+msgid "Quantity must be less than or equal to the delivered quantity"
+msgstr "La quantité doit être inférieure ou égale à la quantité livrée"
+
+#. module: rma_ept
+#: code:addons/rma_ept/models/crm_claim_ept.py:563
+#, python-format
+msgid "Quantity must be positive number"
+msgstr "La quantité doit être positive"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_sale_order
+msgid "Quotation"
+msgstr "Devis"
+
+#. module: rma_ept
+#: model:ir.actions.act_window,name:rma_ept.crm_claim_ept_action
+#: model:ir.model,name:rma_ept.model_crm_claim_ept
+#: model:ir.model.fields,field_description:rma_ept.field_sale_order_rma_count
+#: model:ir.module.category,name:rma_ept.module_category_rma
+#: model:ir.ui.menu,name:rma_ept.menu_crm_claim_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_order_form_extend_rma_ept
+msgid "RMA"
+msgstr "ARM"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "RMA Details"
+msgstr "Détails d'ARM"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "RMA Lines"
+msgstr "Lignes d'ARM"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "RMA Note"
+msgstr "Notice d'ARM"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_code
+msgid "RMA Number"
+msgstr "Numéro d'ARM"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_name
+msgid "RMA Reason"
+msgstr "Raison d'ARM"
+
+#. module: rma_ept
+#: model:ir.actions.act_window,name:rma_ept.rma_reason_ept_action
+#: model:ir.ui.menu,name:rma_ept.menu_rma_reason_ept
+msgid "RMA Reasons"
+msgstr "Raisons d'ARM"
+
+#. module: rma_ept
+#: model:ir.actions.report,name:rma_ept.action_report_rma
+msgid "RMA Report"
+msgstr "Rapport d'ARM"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_rma_send
+msgid "RMA Send"
+msgstr "ARM envoyée"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_rma_reason_id
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "Reason"
+msgstr "Raison"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_return_qty
+msgid "Received Quantity"
+msgstr "Quantité reçue"
+
+#. module: rma_ept
+#: model:ir.actions.act_window,help:rma_ept.crm_claim_ept_action
+msgid "Record and track your customers' RMA. RMA may be linked to a sales order or a lot.You can send emails with attachments and keep the full history for a RMA (emails sent, intervention type and so on). RMA may automatically be linked to an email address using the mail gateway module."
+msgstr "Enregistrez et suivez l'ARM de vos clients. L'ARM peut être liée à une commande client ou à un lot. Vous pouvez envoyer des e-mails avec pièces jointes et conserver l'historique complet d'une ARM (e-mails envoyés, type d'intervention, etc.). L'ARM peut être automatiquement lié à une adresse électronique à l'aide du module de la passerelle de messagerie."
+
+#. module: rma_ept
+#: selection:claim.line.ept,claim_type:0
+#: selection:rma.reason.ept,action:0
+msgid "Refund"
+msgstr "Rembourser"
+
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_refund_invoice_ids
+msgid "Refund Invoices"
+msgstr "Avoirs"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Reject"
+msgstr "Rejeter"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_claim_reject_ept
+msgid "Reject Claim"
+msgstr "Rejeter la réclamation"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_reject_message_id
+#: model:ir.model.fields,field_description:rma_ept.field_claim_reject_message_name
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_reject_message_id
+msgid "Reject Reason"
+msgstr "Raison de rejet"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "Reject Reason:"
+msgstr "Raison de rejet:"
+
+#. module: rma_ept
+#: selection:crm.claim.ept,state:0
+msgid "Rejected"
+msgstr "Rejeté"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_rma_reason_ept_action
+msgid "Related Action"
+msgstr "Action connexe"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_claim_id
+msgid "Related claim"
+msgstr "Réclamation connexe"
+
+#. module: rma_ept
+#: selection:claim.line.ept,claim_type:0
+#: selection:rma.reason.ept,action:0
+msgid "Repair"
+msgstr "Réparer"
+
+#. module: rma_ept
+#: selection:claim.line.ept,claim_type:0
+#: selection:rma.reason.ept,action:0
+msgid "Replace"
+msgstr "Remplacer"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_to_be_replace_quantity
+msgid "Replace Quantity"
+msgstr "Remplacer la quantité"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_resolution
+msgid "Resolution"
+msgstr "Résolution"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Resolution Actions"
+msgstr "Actions de résolution"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_user_id
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: rma_ept
+#: model:ir.model.fields,help:rma_ept.field_crm_claim_ept_section_id
+msgid "Responsible sales channel. Define Responsible user and Email account for mail gateway."
+msgstr "Canal de vente responsable. Définir un utilisateur et un compte de messagerie responsables pour la passerelle de messagerie."
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_stock_warehouse_return_partner_id
+msgid "Return Address"
+msgstr "Adresse de retour"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_return_picking_id
+msgid "Return Delivery Order"
+msgstr "Ordre de livraison de retour"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_to_return_picking_ids
+msgid "Return Delivery Orders"
+msgstr "Ordres de livraison de retour"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_claim_line_ids
+msgid "Return Line"
+msgstr "Ligne de retour"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_location_id
+msgid "Return Location"
+msgstr "Emplacement de retour"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_line_ept_quantity
+#: model:ir.ui.view,arch_db:rma_ept.report_rma_document
+msgid "Return Quantity"
+msgstr "Quantité de retour"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_cause
+msgid "Root Cause"
+msgstr "Cause première"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Root Causes"
+msgstr "Causes premières"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_sale_id
+msgid "Sale Order"
+msgstr "Bon de commande"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_section_id
+msgid "Sales Channel"
+msgstr "Cannal de vente"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_claim_picking
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Search Claims"
+msgstr "Recherche les réclamations"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_send_goods_back
+msgid "Send Goods Back to Customer"
+msgstr "Renvoyer des marchandises au client"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Send RMA By Mail"
+msgstr "Envoyer l'ARM par mail"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Set product to be replace"
+msgstr "Définir le produit à remplacer"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Set to Draft"
+msgstr "Définir comme brouillon"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_claim_process_wizard_state
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_state
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "State"
+msgstr "Etat"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_name
+msgid "Subject"
+msgstr "Objet"
+
+#. module: rma_ept
+#: model:ir.model.fields,help:rma_ept.field_crm_claim_ept_email_cc
+msgid "These email addresses will be added to the CC field of all inbound and outbound emails for this record before being sent. Separate multiple email addresses with a comma"
+msgstr "Ces adresses e-mail seront ajoutées au champ CC de tous les e-mails entrants et sortants pour cet enregistrement avant d'être envoyées. Séparez plusieurs adresses électroniques par une virgule"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_stock_picking
+msgid "Transfer"
+msgstr "Transférer"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_user_fault
+msgid "Trouble Responsible"
+msgstr "Problème responsable"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_crm_case_claims_filter
+msgid "Unassigned Claims"
+msgstr "Réclamations non assignées"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_write_date
+msgid "Update Date"
+msgstr "Date de mise à jour"
+
+#. module: rma_ept
+#: model:res.groups,name:rma_ept.group_rma_user_ept
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_res_users
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.crm_claims_ept_form_view
+msgid "Validate"
+msgstr "Valider"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_stock_picking_view_claim_button
+msgid "View Claim Button"
+msgstr "Afficher le bouton de réclamation"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Entrepôt"
+
+#. module: rma_ept
+#: model:ir.model.fields,field_description:rma_ept.field_crm_claim_ept_email_cc
+msgid "Watchers Emails"
+msgstr "Emails cc"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_claim_process_wizard
+msgid "Wizard to process claim lines"
+msgstr "Assistant de traitement des lignes de réclamation"
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_claim_line_ept
+msgid "claim.line.ept"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_claim_reject_message
+msgid "claim.reject.message"
+msgstr ""
+
+#. module: rma_ept
+#: selection:claim.process.wizard,hide:0
+msgid "false"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.ui.view,arch_db:rma_ept.view_claim_reject_ept
+msgid "or"
+msgstr ""
+
+#. module: rma_ept
+#: model:ir.model,name:rma_ept.model_rma_reason_ept
+msgid "rma.reason.ept"
+msgstr ""
+
+#. module: rma_ept
+#: selection:claim.process.wizard,hide:0
+msgid "true"
+msgstr ""
+

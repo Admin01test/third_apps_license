@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	
+	<t t-name="ViewPDFViewer">
+		<iframe class="o_view_pdfviewer_iframe" t-att-src="src" />
+	</t>	
+
+</template>

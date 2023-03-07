@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_jasper_report_run_form" model="ir.ui.view">
+		<field name="name">jasper.report.run.form</field>
+		<field name="model">jasper.report.run</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="report_id"  invisible="1"/>
+						<field name="format" />
+						<field name="ignore_pagination" />
+						<field name="one_page_per_sheet" attrs="{'invisible': [('format', 'not in', ['xls', 'xlsx'])]}" />
+						<field name="preview" attrs="{'invisible': [('format', 'not in', ['pdf'])]}" />
+					</group>
+				</sheet>
+				<footer>
+					<button string="Print" name="run_report" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+		
+</odoo>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customer Credit Limit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="oe_styling_v8">
+		<br/>
+		<div style="background:#efefef" >
+			<img src="default/default_top.png" style="width:100%;margin-top:-10px">
+			<section class="oe_container oe_dark">
+				<div class="oe_row oe_spaced">
+					<h1 style="padding-top: 0%;text-transform: uppercase;font-weight: 900;color: #3d3d3d !important;margin-bottom:18px;">
+				       <center>Customer Credit Limit</center>
+				    </h1>
+				    <hr style="width: 30%;height: 10px;background: #0DAC9E;margin-top: 0px !important;"/>
+				    
+				    <h4 class="oe_slogan" style="font-weight:400;margin-bottom:-7px">
+				    	<a href="https://www.devintellecs.com/" style="color:#333">DevIntelle Consulting Service Pvt Ltd</a>
+				    </h4> 
+				</div>
+			</section>
+			<img src="default/default_top.png" style="width:100%;margin-bottom:-10px"/>
+		</div>
+		
+		
+		<section class="oe_container ">
+			<div class="oe_row oe_spaced">
+			    <h3 style="font-size: 30px;color:#333;font-family:LatoOpen Sans;" class="text-center">Overview</h3>
+			    <p class="oe_mt32 text-justify" style="font-size: 16px;text-align:center;font-family:Noto Sans CJK TC Thin;color:#333">
+			       	In Business, A  customer credit limit defines the basic amount of credit that you are allow to a customer without the completing the approval process. by Carefully analysis  it will minimize the risk and maximize the revenue into the business and on other side will helpful to salesman to to grow sales process and certain limits for credit approvals.
+
+In odoo , we come with proper solution to set credit limit on customer screen and raise some alert for sales man when outstanding invoice will more the credit limit and send mail notification to sale manager or who having authority to process credit sale orders in odoo.
+			    </p>
+			</div>
+		</section>
+		<section class="oe_container ">
+			<div class="oe_row oe_spaced">
+				<h4 class="oe_slogan" style="font-size:30px;color:#333;font-family:LatoOpen Sans !important;"><b>Feature</b></h4>
+				<div class="col-xs-1"/>
+				<div class="col-xs-8" style="font-size: 20px;font-family:Noto Sans CJK TC Thin;">
+					<img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+						Odoo admin cans set customer limit to any customer from odoo customer screen<br/>
+				    <img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+						Alert Sales Person when customer credit limit will be exceeded <br/>
+				    <img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+						Exceeded credit limit window will show the sum of total outstanding Invoices from previous orders and total bill amount of the current sale quotation being placed for the customer<br/>
+
+<img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+					 Quick allow to set customer on credit limit on hold <br/>
+<img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+					 Sales Manager/ Credit manager will notify by mail when customer sale order goes into credit limit  <br/>
+<img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+					 Separate Menu to see all credit sale orders  <br/>						
+<img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+					 Alert when selecting customer already on credit limit on hold  <br/>
+
+
+				</div>
+			</div>
+		</section>
+		
+		<section class="oe_container">
+		<div class="oe_row oe_spaced">
+			<div class="oe_row oe_spaced">
+			<h4 class="oe_slogan" style="font-size:30px;color:#333;font-family:LatoOpen Sans !important;"><b>How To Work</b></h4>
+			<div class="col-xs-12 text-center" style="background:#0DAC9E;border-radius:5px;margin-top:10px">
+				<span style="font-size:25px;color:#FFF" ><b>Customer Credit Limit </b></span>
+			</div>
+			<div class="col-xs-12" style="margin-top:10px">
+<p> Admin can set the customer Check Credit True in the Customer form. Then after he can set the credit limit of the customer other wise system can not set the credit limit.
+
+ </p>				
+<img src="01_customer_credit_limit.png" style="max-width:100%;max-height:600px"/>
+			</div>
+			
+			<div class="col-xs-12 text-center" style="background:#0DAC9E;border-radius:5px;margin-top:10px">
+				<span style="font-size:25px;color:#FFF" ><b>Exceeded Customer Credit Limit</b></span>
+			</div>
+			<div class="col-xs-12" style="margin-top:10px">
+<p>   
+When the Credit Limit is Exceeded then this window is open by clicking the confirm sale Button.
+You can See full information for Which sale order , Invoice are not Done or Paid.
+When You click the confirm Button then the sale Order is move on credit limit state
+If you set the Customer credit limit hold for second sale order then set True to Credit Limit on Hold.
+</p>				
+	<img src="02_credit_limit_exceed.png" style="max-width:100%;max-height:600px"/>
+			</div>
+			
+			<div class="col-xs-12 text-center" style="background:#0DAC9E;border-radius:5px;margin-top:10px">
+				<span style="font-size:25px;color:#FFF" ><b>Notify the Sales Manager</b></span>
+			</div>
+			<div class="col-xs-12" style="margin-top:10px">
+<p>When You click the confirm button of the Credit limit Window then sales manager get the email for confirm the sale order.  	 </p>							
+<img src="03_credit_limit_approval_mail.png" style="max-width:100%;max-height:600px"/>
+			</div>
+			
+			<div class="col-xs-12 text-center" style="background:#0DAC9E;border-radius:5px;margin-top:10px">
+				<span style="font-size:25px;color:#FFF" ><b>Sales Manager Confirm Sale Quotation</b></span>
+			</div>
+			<div class="col-xs-12" style="margin-top:10px">
+				<img src="04_confirm_sale_order.png" style="max-width:100%;max-height:600px"/>
+			</div>
+			<div class="col-xs-12 text-center" style="background:#0DAC9E;border-radius:5px;margin-top:10px">
+				<span style="font-size:25px;color:#FFF" ><b>View Sales Order in Credit Limit</b></span>
+			</div>
+			<div class="col-xs-12" style="margin-top:10px">
+				<img src="credit_limit_menu.png" style="max-width:100%;max-height:600px"/>
+			</div>
+
+			
+		</div>
+		</section>
+		
+		
+		
+		<section class="oe_container ">
+			<div class="oe_row oe_spaced">
+				<h4 class="oe_slogan" style="font-size:30px;color:#333;font-family:LatoOpen Sans !important;"><b>Free Support</b></h4>
+				<div class="col-12" style="font-size: 18px;font-family:Noto Sans CJK TC Thin;">
+					<img src="default/arrow.png" style="margin-right:5px;width:10px;margin-top:-2px"/>
+						You will get 90 Days free support incase any bugs or issue (Except data recovery).
+				</div>
+			</div>
+		</section>
+		
+		<h4 class="oe_slogan" style="font-size:30px;color:#333;font-family:LatoOpen Sans !important;"><b>Get in Touch</b></h4>
+		<div style="background:#efefef">
+			<img src="default/default_top.png" style="width:100%;margin-top:-10px">
+			<section class="oe_container oe_dark" style="background:#efefef">
+			    <table>
+			        <tr>
+			        <td>
+				    <div class="col-12">
+					    <br/>
+					    <img src="default/logo.png" style="width:60%"/><br/><br/>
+					    <img src="default/gmail.png" style="width:5%"/> &nbsp;&nbsp;<i style="font-size:15px">devintelle@gmail.com</i><br/>
+					    <img src="default/phone.png" style="width:5%"/> &nbsp;&nbsp;<i style="font-size:15px">(+91) 87805 43446</i><br/>
+					    <img src="default/skype.png" style="width:5%"/>&nbsp;&nbsp;<i style="font-size:15px">devintelle</i><br/><br/>
+					    <span width="25%">
+						    <a href="https://plus.google.com/106859683363969286567">
+							    <img src="default/google.png" style="width:15%" style="margin-right:10px"/>
+						    </a>
+					    </span>
+					    <span width="25%">
+						    <a href="https://www.facebook.com/Odoodevintellecs/">
+							    <img src="default/fb.png" style="width:15%" style="margin-right:10px"/>
+						    </a>
+					    </span>
+					    <span width="25%">
+						    <a href="https://www.youtube.com/channel/UCrmu-T0c8rhMXGuB44bH7gA">
+							    <img src="default/youtube.png" style="width:15%" style="margin-right:10px"/>
+						    </a>
+					    </span>
+					    <span width="25%">
+						    <a href="#">
+							    <img src="default/tweet.png" style="width:15%" style="margin-right:10px"/>
+						    </a>
+					    </span>
+					    <span width="25%">
+						    <a href="https://www.linkedin.com/in/devintelle-odoo-service-provide-34785b144/">
+							    <img src="default/linkin.png" style="width:15%" style="margin-right:10px"/>
+						    </a>
+					    </span>
+					    <br/>
+					    <br/>
+				    </div>
+				    </td>
+				    <td>
+				    <div class="col-12 " style="font-size: 15px;color:#333;font-family:LatoOpen Sans;">
+					    <br/>
+					    <span class="col-12" style="font-size:20px;color:#0DAC9E">
+						    <b>Odoo Support Services</b>
+					    </span>
+					    <span class="col-12">
+						    <p style="font-size: 15px;font-family:Noto Sans CJK TC Thin;"> For any other assistance related to the new Odoo feature, customization or Odoo Development.Our Odoo experts will help you to build your business</p>
+					    </span>
+					    <br/>
+					    <br/>
+					    <br/>
+					    <a href="https://www.odoo.com/apps/modules/browse?search=devintelle">
+						    <span class="col-6 text-center" 
+							    style="background:#875A7B;padding:15px;margin:20px;font-family:LatoOpen Sans !important;color:#FFF;border-radius:10px">
+							    <b>OUR MORE APPS</b>
+						    </span>
+					    </a>
+					
+				    </div>
+				    </td>
+				</tr>
+		    </table>
+				    
+			</section>
+			<img src="default/default_top.png" style="width:100%;margin-bottom:-10px">
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

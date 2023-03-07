@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    Shopify Instance-->
+    <record model="ir.rule" id="ks_shopify_instance_security_rule">
+        <field name="name">ks.shopify.instances multi-company</field>
+        <field name="model_id" ref="model_ks_shopify_connector_instance" />
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('ks_company','in',company_ids),('ks_company','=',False)]</field>
+    </record>
+</odoo>

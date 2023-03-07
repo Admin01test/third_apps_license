@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* is_customer_is_vendor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-18 09:07+0000\n"
+"PO-Revision-Date: 2021-10-18 09:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: is_customer_is_vendor
+#: model:ir.model.fields,field_description:is_customer_is_vendor.field_res_partner__customer
+#: model:ir.model.fields,field_description:is_customer_is_vendor.field_res_users__customer
+msgid "Is Customer"
+msgstr "Klant"
+
+#. module: is_customer_is_vendor
+#: model:ir.model.fields,field_description:is_customer_is_vendor.field_res_partner__supplier
+#: model:ir.model.fields,field_description:is_customer_is_vendor.field_res_users__supplier
+msgid "Is Supplier"
+msgstr "Leverancier"
+
+#. module: is_customer_is_vendor
+#: model_terms:ir.ui.view,arch_db:is_customer_is_vendor.view_partner_is_customer_is_vendor_form
+msgid "Partner Type"
+msgstr "Soort Contact"

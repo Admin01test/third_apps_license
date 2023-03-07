@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="account_payment_installment_wizard" model="ir.ui.view">
+            <field name="name">account.payment.installment.wizard</field>
+            <field name="model">account.payment.installment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group string="Payment Details" name="advance_pay">
+                        <group>
+                            <field name="name"/>
+                            <label for="total_amount"/>
+                            <div name="adv_amount_div" class="o_row">
+                                <field name="total_amount"/>
+                                <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency"/>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="invoice_date" readonly="1"/>
+                            <field name="payment_method_id"/>
+                            <field name="journal_id"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_register_payment" type="object" string="Create Payment"
+                        class="oe_highlight" icon="fa-money"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" icon="fa-times"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

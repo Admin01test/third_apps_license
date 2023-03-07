@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.jasper</field>
+		<field name="model">res.config.settings</field>
+		<field name="priority" eval="100" />
+		<field name="inherit_id" ref="base.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]" position="inside">
+				<div class="app_settings_block" data-string="Jasper Report" id="jasper_report" string="Jasper Report" data-key="oi_jasper_report" groups="base.group_system">
+					<h2>Jasper Report</h2>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">							
+							<div >
+								<span class="o_form_label">Server URL</span>
+								<div class="text-muted content-group mt16">
+									<field name="jasper_report_url" placeholder="http://localhost:8080/jasperserver" nolabel="1" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div>
+								<span class="o_form_label">Login Username</span>
+								<div class="text-muted content-group mt16">
+									<field name="jasper_report_user" nolabel="1" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div>
+								<span class="o_form_label">Login Password</span>
+								<div class="text-muted content-group mt16">
+									<field name="jasper_report_password" nolabel="1" password="True" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div>
+								<button name="jasper_test" type="object" string="Test Connection" class="btn btn-primary" />
+							</div>
+						</div>
+					</div>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div>
+								<button name="oi_jasper_report.act_window_jasper_report" icon="fa-arrow-right" type="action" string="Manage Reports" class="btn-link o_web_settings_access_rights"/>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

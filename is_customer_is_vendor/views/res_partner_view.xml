@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_is_customer_is_vendor_form" model="ir.ui.view">
+        <field name="name">res.partner.is_customer.is_vendor.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <group name="sale" position="before">
+                <group string="Partner Type" name="partner_type">
+                    <field name="customer"/>
+                    <field name="supplier"/>
+                </group>
+            </group>
+        </field>
+    </record>
+
+    <record id="view_order_is_customer_is_vendor_form" model="ir.ui.view">
+        <field name="name">sale.order.is_customer.is_vendor.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="attributes">
+                <attribute name="context">
+                    {'res_partner_search_mode': 'customer', 'show_address': 1, 'show_vat': True,'default_customer':True,'default_is_company':True,}
+                </attribute>
+                <attribute name="domain">[('customer','=',True)]</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="purchase_order_is_customer_is_vendor_form" model="ir.ui.view">
+        <field name="name">purchase.order.is_customer.is_vendor.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="attributes">
+                <attribute name="context">
+                    {'res_partner_search_mode': 'supplier', 'show_vat':True, 'default_supplier':True, 'default_is_company':True}
+                </attribute>
+                <attribute name="domain">[('supplier','=',True)]</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_location_form_inherit" model="ir.ui.view">
+			<field name="name">stock.location.form.inherit</field>
+			<field name="model">stock.location</field>
+			<field name="inherit_id" ref="stock_account.view_location_form_inherit" />
+			<field name="arch" type="xml">
+				<xpath expr="//form/sheet/group/group[field[@name='valuation_in_account_id']]" position="replace">
+					<group string="Accounting Information"
+						attrs="{'invisible':[('usage','not in',('inventory','production','transit'))]}">
+						<field name="valuation_in_account_id" />
+						<field name="valuation_out_account_id" />
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

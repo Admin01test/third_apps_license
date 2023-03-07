@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="installment_cron_data" model="ir.cron">
+            <field name="name">Installment Payment Date Reminder</field>
+            <field name="model_id" ref="account_payment_installment_app.model_installment_account_payment_details"/>
+            <field name="user_id" ref="base.user_admin" />
+            <field name="state">code</field>
+            <field name="code">model._installment_reminder_email()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="priority">10</field>
+            <field name="doall" eval="False"/>
+        </record>
+        
+    </data>
+</odoo>

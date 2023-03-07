@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="inherit_view_sale_view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header//button[@name='action_cancel']" position="before">
+                    <button name="btn_advance_payment" string="Advance Payment"
+                        type="object" class="btn-primary"
+                        attrs="{'invisible': [('state', 'in', ['done', 'cancel'])]}"/>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_adv_payments" type="object" class="oe_stat_button" icon="fa-money"
+                        attrs="{'invisible': [('adv_payment_ids', '=', [])]}">
+                        <field name="adv_payment_ids" widget="statinfo" string="Adv. Payments"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_sale_advance_account_payment_form" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="priority">5000</field>
+            <field name="arch" type="xml">
+                <form string="Advance Payment">
+                    <group col="4">
+                        <field name="journal_id" widget="selection" attrs="{'readonly': [('state', '!=', 'draft')]}" domain="[('type', 'in', ['bank', 'cash'])]"/>
+                        <label for="amount"/>
+                        <div name="amount_div" class="o_row">
+                            <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </div>
+                        <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                        <field name="create_in_state_sale" required="1"/>
+                        <field name="hide_payment_method" invisible="1"/>
+                        <field name="payment_method_code" invisible="1"/>
+                        <field name="payment_type" invisible="1"/>
+                        <field name="partner_type" invisible="1"/>
+                        <field name="partner_id" invisible="1"/>
+                        <field name="state" invisible="1"/>
+                        <field name="suitable_journal_ids" invisible="1"/>
+                        <field name="available_payment_method_ids" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="create_sale_adv_payment" type="object" string="Create Advance Payment" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

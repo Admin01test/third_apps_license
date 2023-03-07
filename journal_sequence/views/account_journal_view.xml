@@ -1,0 +1,24 @@
+<odoo>
+    <record model="ir.ui.view" id="view_account_journal_form_seq">
+        <field name="name">account.journal.seq</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page string="Sequence">
+                    <group>
+                        <group string="Sequence">
+                            <field name="sequence_id"/>
+                            <field name="sequence_number_next"/>
+                        </group>
+                        <group string="Refund Sequence">
+                            <field name="refund_sequence_id"/>
+                            <field name="refund_sequence_number_next"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

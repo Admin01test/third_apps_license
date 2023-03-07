@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record
+            id="view_partner_form_inherit_add_credit_limit_group_readonly"
+            model="ir.ui.view">
+        <field name="name">view.partner.form.inherit.add.credit.limit.group.readonly
+        </field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='purchase']" position="after">
+                <group string="Credit" name="credit">
+                    <field name="credit_check" readonly="1"/>
+                    <field name="credit_limit_custom"
+                           attrs="{'invisible':[('credit_check','!=',True)]}"/>
+                    <field name="blocking_limit"
+                           attrs="{'invisible':[('credit_check','!=',True)]}"/>
+                    <field name="is_hold"
+                           attrs="{'invisible':[('credit_check','!=',True)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record
+            id="view_partner_form_inherit_add_credit_limit_group_editable"
+            model="ir.ui.view">
+        <field name="name">view.partner.form.inherit.add.credit.limit.group.editable
+        </field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id"
+               ref="view_partner_form_inherit_add_credit_limit_group_readonly"/>
+        <field name="groups_id"
+               eval="[(6, 0, [ref('sr_customer_credit_limit_group_partner')])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='credit_check']"
+                   position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

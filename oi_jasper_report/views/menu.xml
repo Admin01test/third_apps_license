@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="menu_window_jasper_report" action="act_window_jasper_report" parent="base.reporting_menuitem" sequence="11" />
+
+</odoo>

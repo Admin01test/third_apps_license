@@ -1,0 +1,727 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ks_gantt_view_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-09 04:09+0000\n"
+"PO-Revision-Date: 2021-12-09 04:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid " timesheet.pdf"
+msgstr " hojatiempo.pdf"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/wizard/ks_gantt_view_project_import.py:0
+#: code:addons/ks_gantt_view_project/wizard/ks_gantt_view_project_import.py:0
+#, python-format
+msgid "%s field type can't imported since it is not supported"
+msgstr "El tipo de campo %s no se puede importar porque no es compatible"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks_timesheet
+msgid "<b>Hours Spent:</b>"
+msgstr "<b>Horas Dedicadas: </b>"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks_timesheet
+msgid "<b>Initially Planned Hours: </b>"
+msgstr "<b>Horas Planificadas: </b>"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__alap
+msgid "As Late As Possible"
+msgstr "Lo más tarde posible"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__asap
+msgid "As Soon As Possible"
+msgstr "Lo más pronto posible"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Assigned to"
+msgstr "Asignado a"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_schedule_mode__auto
+msgid "Auto"
+msgstr "Auto"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_project_form
+msgid "Auto mode tasks"
+msgstr "Tareas en modo automático"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_resource_hours_per_day
+msgid "Average Hour per Day"
+msgstr "Promedio horas por día"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_task__ks_resource_hours_per_day
+msgid ""
+"Average hours per day a resource is supposed to work with this calendar."
+msgstr "Promedio de horas por día que un recurso trabaja con este calendario."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_task_link_inherit.py:0
+#, python-format
+msgid "Can't create link with other project task."
+msgstr "No se puede crear un vínculo con otra Tarea del Proyecto."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_task_link_inherit.py:0
+#, python-format
+msgid "Can't create same link with same task."
+msgstr "No se puede crear el mismo enlace con la misma tarea."
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_gantt_view_import_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_color
+msgid "Color"
+msgstr "Color"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_gantt_view_import_wizard
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_constraint_date
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_constraint_task_date
+msgid "Constraint Date"
+msgstr "Fecha Restricción"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_constraint_type
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_constraint_task_type
+msgid "Constraint Type"
+msgstr "Tipo Restricción"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks_timesheet
+msgid "Date"
+msgstr "Fecha"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_days_off
+msgid "Days Off"
+msgstr "Días de Ausencia"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_enable_project_deadline
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_deadline
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Deadline"
+msgstr "Fecha Límite"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks_timesheet
+msgid "Description"
+msgstr "Descripción"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__display_name
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_task_link__display_name
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__display_name
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__display_name
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task_type__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_duration
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_task_duration
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_work_duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks_timesheet
+msgid "Duration (Hours)"
+msgstr "Duración (Hrs)"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_enable_task_dynamic_progress
+msgid "Dynamic Progress"
+msgstr "Progreso Dinámico"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_enable_task_dynamic_text
+msgid "Dynamic Text"
+msgstr "Texto Dinámico"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Email send successfully"
+msgstr "Email enviado con éxito"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks_timesheet
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_enable_task_duration
+msgid "Enable Task Duration"
+msgstr "Activar Duración de tarea"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_constraint_date
+msgid "Enable task constraint date on tooltip"
+msgstr "Activar Fecha Restricción de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_constraint_type
+msgid "Enable task constraint type on tooltip"
+msgstr "Activar Tipo Restricción de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_deadline
+msgid "Enable task deadline on tooltip"
+msgstr "Activar Fecha Límite de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_duration
+msgid "Enable task duration on tooltip"
+msgstr "Activar Duración de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_end_date
+msgid "Enable task end date on tooltip"
+msgstr "Activar Fecha Fin de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_name
+msgid "Enable task name on tooltip"
+msgstr "Activar Nombre de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_progress
+msgid "Enable task progress on tooltip"
+msgstr "Activar Progreso de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_stage
+msgid "Enable task stage on tooltip"
+msgstr "Activar Etapa de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_tooltip_task_start_date
+msgid "Enable task start date on tooltip"
+msgstr "Activar Fecha Inicio de tarea en información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_days_off
+msgid "Enable to remove off days from the gantt"
+msgstr "Activar Eliminación de días de Ausencia en la Gantt"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_enable_project_deadline
+msgid "Enable/Disable Deadline of the tasks."
+msgstr "Activar/Desactivar Fecha Límite de tareas."
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_enable_quickinfo_extension
+msgid "Enable/Disable Quick Info."
+msgstr "Activar/Desactivar Información rápida."
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_enable_task_dynamic_progress
+msgid "Enable/Disable Task Dynamic Progress."
+msgstr "Activar/Desactivar Progreso Dinámico en tarea."
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_enable_task_dynamic_text
+msgid "Enable/Disable Task Dynamic Text."
+msgstr "Activar/Desactivar Texto Dinámico en tarea."
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_project_end
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_end_date
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_end_datetime
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Error when sending mail: %s"
+msgstr "Error al enviar email: %s"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__ks_gantt_import_wizard__ks_file_type__xlsx
+msgid "Excel"
+msgstr "Excel"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__ks_file_type
+msgid "File Type"
+msgstr "Tipo de Archivo"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/wizard/ks_gantt_view_project_import.py:0
+#: code:addons/ks_gantt_view_project/wizard/ks_gantt_view_project_import.py:0
+#, python-format
+msgid "File can't be read please upload correct file"
+msgstr "El archivo no se puede leer, verifique"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__fnet
+msgid "Finish No Earlier Than"
+msgstr "No terminar antes de"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__fnlt
+msgid "Finish No Later Than"
+msgstr "Terminar no más tarde de"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_project_form
+msgid "Gantt Chart Settings"
+msgstr "Configuración de Diagrama Gantt"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_task_form
+msgid "Gantt Detail"
+msgstr "Detalle Gantt"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_project_form
+msgid "Gantt Settings"
+msgstr "Configuración de Gantt"
+
+#. module: ks_gantt_view_project
+#: model:ir.actions.server,name:ks_gantt_view_project.ir_cron_task_due_alert_action_ir_actions_server
+#: model:ir.cron,cron_name:ks_gantt_view_project.ir_cron_task_due_alert_action
+#: model:ir.cron,name:ks_gantt_view_project.ir_cron_task_due_alert_action
+msgid "Gantt Task Deadline Alert"
+msgstr "Alerta de Fecha Límite de tarea en Gantt"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Hi %s, Task : %s has been assigned to you."
+msgstr "Hola %s, se te ha asignado la tarea: %s."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_inherit.py:0
+#, python-format
+msgid ""
+"Hi %s, This mail is to remind you %s have only %s days for the deadline."
+msgstr "Hola %s, este email es para recordarte que %s tiene solo %s días para la Fecha Límite."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Hi %s, Timesheet report for task %s is attached please check it."
+msgstr "Hola %s, se adjunta el informe de la hoja de horas trabajadas para la tarea %s."
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_hide_date
+msgid "Hide Holiday Day"
+msgstr "Ocultar día festivo"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_project__ks_hide_date
+msgid "Hide holidays on the gantt view"
+msgstr "Ocultar vacaciones en la Gantt"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_hr_leave__id
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__id
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_task_link__id
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__id
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__id
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ks_gantt_view_project
+#: model:ir.actions.act_window,name:ks_gantt_view_project.action_gantt_view_import_id
+#: model:ir.ui.menu,name:ks_gantt_view_project.ks_gantt_view_import_menuitem
+msgid "Import Project"
+msgstr "Importar proyecto"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__ks_gantt_import_wizard__ks_file_type__json
+msgid "JSON"
+msgstr "JSON"
+
+#. module: ks_gantt_view_project
+#: model:ir.model,name:ks_gantt_view_project.model_ks_task_link
+msgid "Ks Gantt Task Linking"
+msgstr "Vinculación de tareas de Gantt"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_project_task_json
+msgid "Ks Project Task Json"
+msgstr "Ks Project Task Json"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_project_task_linking
+msgid "Ks Project Task Linking"
+msgstr "Vinculación de tareas del Proyecto"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_resource_hours_available
+msgid "Ks Resource Hours Available"
+msgstr "Horas de Recursos Disponibles"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_task_link_json
+msgid "Ks Task Link Json"
+msgstr "Ks Task Link Json"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_task_link_ids
+msgid "Ks_task_link_ids"
+msgstr "Ks_task_link_ids"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard____last_update
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_task_link____last_update
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project____last_update
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task____last_update
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task_type____last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Modificado por"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__write_date
+msgid "Last Updated on"
+msgstr "Modificado en"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_task_form
+msgid "Link Task"
+msgstr "Vincular tarea"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_project_form
+msgid "Mail timesheet user"
+msgstr "Email de Usuario de hoja de horas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_mail_timesheet_user
+msgid "Mail user"
+msgstr "Email de Usuario"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_schedule_mode__manual
+msgid "Manual"
+msgstr "Manual"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_mark_important
+msgid "Mark As Important"
+msgstr "Marcar como importante"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_task__ks_mark_important
+msgid "Mark as an important task"
+msgstr "Marcar como tarea importante"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_task_type__milestone
+msgid "Milestone"
+msgstr "Hito"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__mfo
+msgid "Must Finish On"
+msgstr "Debe terminar en"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__mso
+msgid "Must Start On"
+msgstr "Debe empezar en"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Please select the user before sending the mail from project setting"
+msgstr "Seleccione el usuario antes de enviar el email desde la configuración del proyecto"
+
+#. module: ks_gantt_view_project
+#: model:ir.actions.report,name:ks_gantt_view_project.action_report_gantt_tasks
+msgid "Print Tasks"
+msgstr "Imprimir Tareas"
+
+#. module: ks_gantt_view_project
+#: model:ir.actions.report,name:ks_gantt_view_project.action_report_gantt_tasks_timesheet
+msgid "Print Timesheet"
+msgstr "Imprimir Hoja de Horas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_progress
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Progress"
+msgstr "Progreso"
+
+#. module: ks_gantt_view_project
+#: model:ir.model,name:ks_gantt_view_project.model_project_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_enable_quickinfo_extension
+msgid "Quick Info"
+msgstr "Información rápida"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/wizard/ks_gantt_view_project_import.py:0
+#, python-format
+msgid ""
+"Required data not found in the json file, please upload correct json file."
+msgstr "Los datos requeridos no se encuentran en el archivo json, verifique"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_schedule_mode
+msgid "Schedule Mode"
+msgstr "Modo horario"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_days_off_selection
+msgid "Select Days"
+msgstr "Seleccionar días"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_task_form
+msgid "Send Email"
+msgstr "Enviar Email"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Sequence Changed"
+msgstr "Secuencia cambiada"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_task_link__ks_source_task_id
+msgid "Source Task"
+msgstr "Origen de Tarea"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_stage
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task_type__ks_stage_color
+msgid "Stage Color"
+msgstr "Color de Etapa"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_project_start
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_project__ks_tooltip_task_start_date
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_start_datetime
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__snet
+msgid "Start No Earlier Than"
+msgstr "No empiece antes de"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_constraint_task_type__snlt
+msgid "Start No Late Than"
+msgstr "No empiece tarde de"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_allow_subtask
+msgid "Sub-tasks"
+msgstr "Subtareas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_task_link__ks_target_task_id
+msgid "Target Task"
+msgstr "Objetivo de Tarea"
+
+#. module: ks_gantt_view_project
+#: model:ir.model,name:ks_gantt_view_project.model_project_task
+#: model:ir.model.fields.selection,name:ks_gantt_view_project.selection__project_task__ks_task_type__task
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Task"
+msgstr "Tarea"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task Assignment Mail"
+msgstr "Email de asignación de tareas"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task Assignment mail unsuccessful with the error : %s"
+msgstr "Email de tareas fallidas con error: %s"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_inherit.py:0
+#, python-format
+msgid "Task Deadline Reminder Mail"
+msgstr "Email de recordatorio de Fecha Límite de tarea"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task Progress"
+msgstr "Progreso de Tarea"
+
+#. module: ks_gantt_view_project
+#: model:ir.model,name:ks_gantt_view_project.model_project_task_type
+msgid "Task Stage"
+msgstr "Etapa de Tarea"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_task_type
+msgid "Task Type"
+msgstr "Tipo de Tarea"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_inherit.py:0
+#, python-format
+msgid ""
+"Task deadline reminder mail send successfully for task : (%s), user (%s)"
+msgstr "El email de recordatorio de la fecha límite se envió correctamente para la tarea: (%s), usuario (%s)"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_inherit.py:0
+#, python-format
+msgid ""
+"Task deadline reminder mail unsuccessfully for task : (%s), user (%s) \n"
+" error log : %s"
+msgstr "Mensaje de recordatorio de Fecha Límite sin éxito para la tarea: (%s), usuario (%s) \n registro de errores: %s"
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task end date cannot be smaller then the start date."
+msgstr "La Fecha Fin de tarea no puede ser menor que la Fecha Inicio."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task should be finish on the constraint date or after it."
+msgstr "La tarea debe terminar en la Fecha Límite o después."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task should be finish on the constraint date or before it."
+msgstr "La tarea debe terminar en la Fecha Límite o antes."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task should be start on the constraint date or after it."
+msgstr "La tarea debe comenzar en la Fecha Restricción o después de ella."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task should be start on the constraint date or before it."
+msgstr "La tarea debe comenzar en la Fecha Restricción o antes."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task should finish exactly on the constraint date."
+msgstr "La tarea debe terminar exactamente en la Fecha Restricción."
+
+#. module: ks_gantt_view_project
+#: code:addons/ks_gantt_view_project/models/ks_gantt_project_task.py:0
+#, python-format
+msgid "Task should start exactly on the constraint date."
+msgstr "La tarea debe comenzar exactamente en la Fecha Restricción."
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.report_ks_gantt_tasks
+msgid "Tasks List"
+msgstr "Lista de tareas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model,name:ks_gantt_view_project.model_hr_leave
+msgid "Time Off"
+msgstr "Ausencias"
+
+#. module: ks_gantt_view_project
+#: model_terms:ir.ui.view,arch_db:ks_gantt_view_project.ks_view_project_form
+msgid "Tooltip Settings"
+msgstr "Configuración de Información de herramientas"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_project_task__ks_task_unschedule
+msgid "Unschedule"
+msgstr "Desprogramar"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,field_description:ks_gantt_view_project.field_ks_gantt_import_wizard__ks_file
+msgid "Upload File"
+msgstr "Subir archivo"
+
+#. module: ks_gantt_view_project
+#: model:ir.model.fields,help:ks_gantt_view_project.field_project_task__ks_work_duration
+msgid "Working Duration in day Hours"
+msgstr "Duración de trabajo en horas del día"
+
+#. module: ks_gantt_view_project
+#: model:ir.model,name:ks_gantt_view_project.model_ks_gantt_import_wizard
+msgid "ks.gantt.import.wizard"
+msgstr "ks.gantt.import.wizard"
+
+#. module: ks_gantt_view_project
+#: model:ir.actions.report,print_report_name:ks_gantt_view_project.action_report_gantt_tasks_timesheet
+msgid ""
+"object.name + ' timesheet'\n"
+"            "
+msgstr ""
+
+#. module: ks_gantt_view_project
+#: model:ir.actions.report,print_report_name:ks_gantt_view_project.action_report_gantt_tasks
+msgid ""
+"object.project_id.name\n"
+"            "
+msgstr ""
